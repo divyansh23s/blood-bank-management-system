@@ -27,9 +27,12 @@ import DonorDirectory from "./pages/hospital/DonorDirectory";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import DonorDonationHistory from "./pages/donor/DonorDonationHistory";
+import Chatbot from "./components/Chatbot";
+import DonorRecommendationSystem from "./components/DonorRecommendationSystem";
 
 function App() {
   return (
+    <>
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<LandingPage />} />
@@ -38,6 +41,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/donor/recommend" element={<DonorRecommendationSystem />} />
 
         <Route path="/donor" element={<ProtectedRoute><DashboardLayout userRole="donor" /></ProtectedRoute>}>
           <Route index element={<DonorDashboard />} />
@@ -70,6 +74,8 @@ function App() {
           <Route path="facilities" element={<GetAllFacilities />} />
         </Route>
       </Routes>
+      <Chatbot />
+    </>
   );
 }
 

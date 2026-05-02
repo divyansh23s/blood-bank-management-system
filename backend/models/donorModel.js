@@ -45,6 +45,10 @@ const donorSchema = new mongoose.Schema(
         required: [true, "Pincode is required"],
         match: [/^[1-9][0-9]{5}$/, "Please enter a valid 6-digit pincode"],
       },
+      location: {
+        lat: { type: Number },
+        lng: { type: Number },
+      },
     },
 
     // 🩸 Medical / Blood Info

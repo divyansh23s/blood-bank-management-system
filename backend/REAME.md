@@ -73,6 +73,6 @@ Ensure you have the following installed locally:
 
 Access the Swagger UI for API documentation at:
 
-- `http://localhost:5000/api/doc`
+- `http://localhost:5001/api/doc`
 
 This interface provides a detailed view of available endpoints and their usage.
